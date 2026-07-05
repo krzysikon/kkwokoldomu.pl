@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>K&amp;K Wokół Domu — Usługi ogrodowe, elewacje, wywóz i sprzątanie parkingów</title>
+<meta name="description" content="Kompleksowe usługi wokół domu, ogrodu i firmy. Mycie elewacji, prace ogrodowe, zakładanie rabat, tarasy, wywóz odpadów, mycie kostki i sprzątanie parkingów.">
+<meta name="keywords" content="usługi wokół domu, usługi ogrodowe, mycie elewacji, mycie kostki brukowej, sprzątanie parkingów, sprzątanie terenów zewnętrznych, wywóz odpadów, zakładanie rabat, prace ogrodowe, kompleksowa obsługa posesji, pielęgnacja ogrodu, porządki wokół domu, sprzątanie posesji, obsługa terenów zewnętrznych dla firm">
+<link rel="canonical" href="https://kkwokoldomu.pl/">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:site_name" content="K&amp;K Wokół Domu">
+<meta property="og:title" content="K&amp;K Wokół Domu — Kompleksowe usługi wokół domu, ogrodu i firmy">
+<meta property="og:description" content="Elewacje, ogrody, tarasy, wywóz odpadów, sprzątanie parkingów i prace porządkowe — jedna ekipa, wiele usług, profesjonalny efekt.">
+<meta property="og:url" content="https://kkwokoldomu.pl/">
+<meta property="og:image" content="https://kkwokoldomu.pl/assets/hero.png">
+
+<link rel="icon" type="image/png" href="assets/logo.png">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "K&K Wokół Domu",
+  "description": "Kompleksowa obsługa terenów zewnętrznych: mycie elewacji, prace ogrodowe, zakładanie rabat, tarasy, wywóz odpadów, mycie kostki brukowej oraz sprzątanie parkingów i terenów firmowych.",
+  "url": "https://kkwokoldomu.pl",
+  "email": "kontakt@kkwokoldomu.pl",
+  "areaServed": "Polska",
+  "priceRange": "$$",
+  "image": "https://kkwokoldomu.pl/assets/hero.png",
+  "makesOffer": [
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mycie i czyszczenie elewacji" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Prace ogrodowe" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Zakładanie rabat i aranżacje ogrodowe" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tarasy i prace wokół domu" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Wywóz i utylizacja odpadów" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sprzątanie parkingów i terenów firmowych" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mycie kostki brukowej i podjazdów" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kompleksowe porządki wokół posesji" } }
+  ]
+}
+</script>
+
+<style>
+:root{
+  --cream:#f4efe4;
+  --cream-2:#efe8d9;
+  --card:#fffdf7;
+  --ink:#161a13;
+  --ink-2:#1f241b;
+  --ink-3:#2b3125;
+  --sage:#8a9a67;
+  --sage-deep:#566043;
+  --sage-text:#4e5a3c;
+  --forest:#333b28;
+  --muted:#6f6e60;
+  --muted-light:#a8a595;
+  --line:#ddd5c4;
+  --line-dark:rgba(244,239,228,.14);
+  --cream-on-dark:#e9e3d4;
+
+  --f-display:"Fraunces",Georgia,"Times New Roman",serif;
+  --f-body:"Inter Tight",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+
+  --maxw:1240px;
+  --gutter:clamp(20px,5vw,64px);
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:var(--f-body);
+  background:var(--cream);
+  color:var(--ink);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+
+/* ---------- Type helpers ---------- */
+.eyebrow{
+  font-family:var(--f-mono);
+  font-size:.72rem;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  font-weight:500;
+  color:var(--sage-text);
+  display:inline-flex;
+  align-items:center;
+  gap:.7em;
+}
+.eyebrow::before{
+  content:"";
+  width:22px;height:1px;
+  background:var(--sage);
+  display:inline-block;
+}
+.eyebrow.on-dark{color:var(--sage);}
+.display{
+  font-family:var(--f-display);
+  font-weight:400;
+  line-height:1.03;
+  letter-spacing:-.015em;
+  font-optical-sizing:auto;
+}
+h1.display{font-size:clamp(2.6rem,6.4vw,5.1rem);}
+h2.display{font-size:clamp(2.1rem,4.6vw,3.6rem);}
+.lead{font-size:clamp(1.05rem,1.6vw,1.28rem);color:var(--muted);max-width:44ch;}
+
+/* ---------- Buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;gap:.6em;
+  font-family:var(--f-mono);
+  font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;
+  padding:.95em 1.5em;
+  border-radius:2px;
+  border:1px solid transparent;
+  transition:background .25s ease,color .25s ease,border-color .25s ease,transform .2s ease;
+  cursor:pointer;min-height:46px;
+}
+.btn .arw{transition:transform .25s ease}
+.btn:hover .arw{transform:translateX(4px)}
+.btn-primary{background:var(--sage-deep);color:var(--cream);}
+.btn-primary:hover{background:var(--forest);}
+.btn-outline{border-color:currentColor;color:var(--ink);}
+.btn-outline:hover{background:var(--ink);color:var(--cream);border-color:var(--ink);}
+.btn-outline.on-dark{color:var(--cream-on-dark);}
+.btn-outline.on-dark:hover{background:var(--cream);color:var(--ink);border-color:var(--cream);}
+.btn-ghost{padding-left:0;padding-right:0;color:var(--sage-text);border:0;}
+.link-arrow{
+  font-family:var(--f-mono);font-size:.75rem;letter-spacing:.05em;text-transform:uppercase;
+  display:inline-flex;align-items:center;gap:.5em;color:var(--sage-text);
+}
+.link-arrow .arw{transition:transform .25s ease}
+.link-arrow:hover .arw{transform:translateX(4px)}
+
+/* ---------- Layout ---------- */
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--gutter);}
+section{position:relative}
+.band-dark{background:var(--ink);color:var(--cream-on-dark);}
+.band-cream{background:var(--cream);}
+.band-cream-2{background:var(--cream-2);}
+.pad{padding:clamp(72px,10vw,140px) 0;}
+
+/* ---------- Header ---------- */
+.site-header{
+  position:fixed;top:0;left:0;right:0;z-index:60;
+  transition:background .3s ease,box-shadow .3s ease,border-color .3s ease;
+  border-bottom:1px solid transparent;
+}
+.header-inner{
+  max-width:var(--maxw);margin:0 auto;padding:16px var(--gutter);
+  display:flex;align-items:center;justify-content:space-between;gap:24px;
+}
+.brand{display:flex;align-items:center;gap:12px;}
+.brand img{width:46px;height:46px;border-radius:50%;background:#fff;padding:2px;}
+.brand-name{font-family:var(--f-display);font-size:1.18rem;letter-spacing:-.01em;line-height:1;color:#fff;transition:color .3s ease;}
+.brand-name small{display:block;font-family:var(--f-mono);font-size:.58rem;letter-spacing:.24em;text-transform:uppercase;color:var(--sage);margin-top:4px;font-weight:500;}
+.nav{display:flex;align-items:center;gap:34px;}
+.nav a{font-size:.92rem;color:rgba(255,255,255,.82);transition:color .2s ease;}
+.nav a:hover{color:#fff;}
+.header-cta{display:inline-flex;}
+.site-header.scrolled{background:var(--ink);border-bottom-color:var(--line-dark);box-shadow:0 8px 30px rgba(0,0,0,.18);}
+.burger{display:none;background:none;border:0;cursor:pointer;width:44px;height:44px;flex-direction:column;justify-content:center;gap:5px;align-items:flex-end;}
+.burger span{display:block;height:2px;width:26px;background:#fff;transition:transform .3s ease,opacity .3s ease;}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;background:var(--ink);color:#fff;min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding-top:120px;}
+.hero-media{position:absolute;inset:0;overflow:hidden;}
+.hero-media img{width:100%;height:100%;object-fit:cover;object-position:center 40%;}
+.hero-media::after{
+  content:"";position:absolute;inset:0;
+  background:
+    linear-gradient(180deg,rgba(16,19,13,.55) 0%,rgba(16,19,13,.15) 30%,rgba(16,19,13,.55) 68%,rgba(16,19,13,.94) 100%),
+    linear-gradient(90deg,rgba(16,19,13,.72) 0%,rgba(16,19,13,.28) 46%,rgba(16,19,13,0) 78%);
+}
+.hero-inner{position:relative;z-index:2;width:100%;max-width:var(--maxw);margin:0 auto;padding:0 var(--gutter) clamp(40px,6vw,72px);}
+.hero h1{margin:.5em 0 .32em;max-width:15ch;color:#fff;}
+.hero .lead{color:rgba(255,255,255,.86);max-width:52ch;font-size:clamp(1.08rem,1.7vw,1.35rem);}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px;}
+.hero-cta .btn-primary{background:var(--sage);color:var(--ink);}
+.hero-cta .btn-primary:hover{background:#fff;}
+
+/* hero teaser cards */
+.hero-cards{
+  position:relative;z-index:2;width:100%;max-width:var(--maxw);margin:0 auto;
+  padding:0 var(--gutter);
+  transform:translateY(clamp(36px,5vw,58px));
+}
+.hero-cards-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  background:rgba(20,24,17,.72);
+  backdrop-filter:blur(2px);
+  border:1px solid var(--line-dark);
+}
+.hcard{padding:26px 28px;border-right:1px solid var(--line-dark);}
+.hcard:last-child{border-right:0;}
+.hcard-top{display:flex;align-items:center;gap:9px;margin-bottom:12px;}
+.hcard-top .dot{width:7px;height:7px;background:var(--sage);transform:rotate(45deg);}
+.hcard h3{font-family:var(--f-body);font-size:1.02rem;font-weight:600;color:#fff;letter-spacing:.01em;}
+.hcard p{font-size:.86rem;color:rgba(255,255,255,.62);margin-bottom:16px;line-height:1.5;}
+.hcard .link-arrow{color:var(--sage);}
+
+/* spacer so overlapping cards don't collide with next section */
+.hero-spacer{height:clamp(70px,9vw,120px);background:var(--cream);}
+
+/* ---------- Section header ---------- */
+.sec-head{max-width:60ch;}
+.sec-head .eyebrow{margin-bottom:22px;}
+.sec-head h2{margin-bottom:0;}
+
+/* ---------- About (01) ---------- */
+.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(40px,6vw,90px);align-items:start;}
+.about-copy p{color:var(--muted);font-size:1.07rem;margin-bottom:1.2em;max-width:46ch;}
+.about-copy .btn{margin-top:14px;}
+.feature-list{display:flex;flex-direction:column;}
+.feature{display:grid;grid-template-columns:auto 1fr;gap:20px;padding:22px 0;border-top:1px solid var(--line);}
+.feature:last-child{border-bottom:1px solid var(--line);}
+.feature .mark{width:32px;height:32px;border:1px solid var(--sage);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;}
+.feature .mark::before{content:"";width:9px;height:9px;background:var(--sage);transform:rotate(45deg);}
+.feature h4{font-size:1.06rem;font-weight:600;margin-bottom:5px;letter-spacing:.01em;}
+.feature p{font-size:.95rem;color:var(--muted);}
+
+/* ---------- Services (02) ---------- */
+.services .sec-head h2{color:#fff;}
+.services .lead{color:rgba(255,255,255,.7);margin-top:18px;}
+.svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line-dark);border:1px solid var(--line-dark);margin-top:clamp(40px,5vw,64px);}
+.svc{background:var(--ink);padding:32px 28px 38px;display:flex;flex-direction:column;min-height:300px;transition:background .3s ease;}
+.svc:hover{background:var(--ink-2);}
+.svc .num{font-family:var(--f-mono);font-size:.72rem;color:var(--sage);letter-spacing:.1em;margin-bottom:auto;}
+.svc h3{font-family:var(--f-display);font-size:1.5rem;font-weight:500;color:#fff;line-height:1.12;margin:52px 0 12px;}
+.svc p{font-size:.9rem;color:rgba(255,255,255,.6);line-height:1.55;}
+
+/* ---------- Full-bleed photo strip ---------- */
+.strip{position:relative;height:clamp(340px,46vw,560px);overflow:hidden;}
+.strip img{width:100%;height:100%;object-fit:cover;}
+.strip::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(16,19,13,.82) 0%,rgba(16,19,13,.35) 50%,rgba(16,19,13,.1) 100%);}
+.strip-inner{position:absolute;inset:0;z-index:2;display:flex;align-items:center;}
+.strip-inner .wrap{width:100%;}
+.strip-inner .eyebrow{color:var(--sage);margin-bottom:18px;}
+.strip-inner h2{color:#fff;max-width:18ch;}
+.strip-inner p{color:rgba(255,255,255,.82);max-width:40ch;margin-top:16px;}
+
+/* ---------- Process (03) ---------- */
+.process-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(40px,6vw,80px);align-items:center;}
+.process-photo{position:relative;}
+.process-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;}
+.process-photo .tag{position:absolute;left:0;bottom:0;background:var(--sage-deep);color:var(--cream);font-family:var(--f-mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;padding:12px 20px;}
+.steps{counter-reset:step;}
+.step{display:grid;grid-template-columns:auto 1fr;gap:22px;padding:20px 0;border-bottom:1px solid var(--line);}
+.step:first-child{padding-top:0;}
+.step .n{font-family:var(--f-mono);font-size:.8rem;color:var(--sage-text);padding-top:4px;}
+.step h4{font-size:1.08rem;font-weight:600;margin-bottom:4px;}
+.step p{color:var(--muted);font-size:.96rem;}
+
+/* ---------- Business (dla firm) ---------- */
+.biz-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,80px);align-items:center;}
+.biz-copy p{color:rgba(255,255,255,.72);font-size:1.07rem;margin:20px 0 32px;max-width:46ch;}
+.biz-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:0 34px;}
+.biz-list li{display:flex;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid var(--line-dark);font-size:.98rem;color:var(--cream-on-dark);}
+.biz-list li::before{content:"";width:8px;height:8px;background:var(--sage);transform:rotate(45deg);flex-shrink:0;}
+.biz-photo img{width:100%;aspect-ratio:1/1;object-fit:cover;}
+
+/* ---------- Audience (dla kogo) ---------- */
+.aud-head{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:56px;}
+.aud-head p{color:var(--muted);font-size:1.07rem;max-width:48ch;}
+.aud-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+.aud{background:var(--card);padding:30px 28px;}
+.aud .n{font-family:var(--f-mono);font-size:.72rem;color:var(--sage-text);letter-spacing:.1em;}
+.aud h4{font-family:var(--f-display);font-size:1.28rem;font-weight:500;margin:16px 0 8px;line-height:1.15;}
+.aud p{font-size:.92rem;color:var(--muted);}
+
+/* ---------- CTA closing ---------- */
+.closing{position:relative;text-align:center;overflow:hidden;}
+.closing .eyebrow{justify-content:center;color:var(--sage);}
+.closing .eyebrow::before{display:none;}
+.closing h2{color:#fff;margin:22px auto 0;max-width:16ch;}
+.closing p{color:rgba(255,255,255,.7);margin:20px auto 0;max-width:52ch;}
+.closing .hero-cta{justify-content:center;}
+
+/* ---------- Contact ---------- */
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(40px,6vw,80px);}
+.contact-info p{color:var(--muted);font-size:1.07rem;margin:20px 0 34px;max-width:40ch;}
+.contact-detail{border-top:1px solid var(--line);padding:18px 0;display:flex;justify-content:space-between;align-items:baseline;gap:20px;}
+.contact-detail:last-of-type{border-bottom:1px solid var(--line);}
+.contact-detail .k{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sage-text);}
+.contact-detail .v{font-size:1.05rem;font-weight:500;}
+.contact-detail a:hover{color:var(--sage-deep);}
+form{display:grid;gap:18px;}
+.field{display:flex;flex-direction:column;gap:7px;}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+label{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);}
+input,textarea{
+  font-family:var(--f-body);font-size:1rem;color:var(--ink);
+  background:var(--card);border:1px solid var(--line);
+  padding:14px 16px;border-radius:2px;width:100%;
+  transition:border-color .2s ease,box-shadow .2s ease;
+}
+input:focus,textarea:focus{outline:none;border-color:var(--sage);box-shadow:0 0 0 3px rgba(138,154,103,.18);}
+textarea{resize:vertical;min-height:130px;}
+form .btn-primary{justify-self:start;background:var(--sage-deep);color:var(--cream);}
+.form-note{font-size:.85rem;color:var(--muted);}
+
+/* ---------- Footer ---------- */
+.footer{background:var(--ink);color:var(--cream-on-dark);padding:clamp(60px,7vw,96px) 0 40px;}
+.footer-top{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;padding-bottom:56px;border-bottom:1px solid var(--line-dark);}
+.footer .brand-name{color:#fff;}
+.footer-brand p{color:rgba(255,255,255,.6);font-size:.95rem;margin:20px 0;max-width:34ch;}
+.footer-col h5{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--sage);margin-bottom:18px;font-weight:500;}
+.footer-col a,.footer-col span{display:block;color:rgba(255,255,255,.68);font-size:.92rem;padding:6px 0;transition:color .2s ease;}
+.footer-col a:hover{color:#fff;}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;gap:20px;padding-top:28px;flex-wrap:wrap;}
+.footer-bottom span{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.45);}
+
+/* mobile nav hidden by default (desktop) */
+.mobile-nav{display:none;}
+
+/* ---------- Reveal ---------- */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease,cubic-bezier(0,0,.2,1)),transform .7s cubic-bezier(0,0,.2,1);}
+.reveal.in{opacity:1;transform:none;}
+
+/* ---------- Responsive ---------- */
+@media(max-width:1024px){
+  .svc-grid{grid-template-columns:repeat(2,1fr);}
+  .aud-grid{grid-template-columns:1fr;}
+  .footer-top{grid-template-columns:1fr 1fr;gap:36px 24px;}
+  .footer-brand{grid-column:1/-1;}
+}
+@media(max-width:860px){
+  .nav,.header-cta{display:none;}
+  .burger{display:flex;}
+  .site-header.scrolled .header-inner,.mobile-open .header-inner{}
+  .about-grid,.process-grid,.biz-grid,.contact-grid,.aud-head{grid-template-columns:1fr;}
+  .process-grid{gap:36px;}
+  .process-photo{order:-1;}
+  .process-photo img{aspect-ratio:16/10;}
+  .hero-cards-grid{grid-template-columns:1fr;}
+  .hcard{border-right:0;border-bottom:1px solid var(--line-dark);}
+  .hcard:last-child{border-bottom:0;}
+  .biz-list{grid-template-columns:1fr;}
+  .biz-photo{order:-1;}
+
+  /* mobile nav panel */
+  .mobile-nav{
+    display:flex;
+    position:fixed;inset:0;z-index:55;background:var(--ink);
+    display:flex;flex-direction:column;justify-content:center;gap:8px;
+    padding:0 var(--gutter);
+    transform:translateY(-100%);transition:transform .4s cubic-bezier(.4,0,.2,1);
+    visibility:hidden;
+  }
+  .mobile-nav.open{transform:none;visibility:visible;}
+  .mobile-nav a{font-family:var(--f-display);font-size:2rem;color:#fff;padding:12px 0;border-bottom:1px solid var(--line-dark);}
+  .mobile-nav .btn{margin-top:26px;justify-content:center;}
+  body.mobile-open{overflow:hidden;}
+  body.mobile-open .burger span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  body.mobile-open .burger span:nth-child(2){opacity:0;}
+  body.mobile-open .burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+}
+@media(max-width:560px){
+  .svc-grid{grid-template-columns:1fr;}
+  .row2{grid-template-columns:1fr;}
+  .aud-head{gap:16px;}
+  h1.display{font-size:clamp(2.3rem,9vw,3rem);}
+  .hero{min-height:auto;padding-top:150px;padding-bottom:20px;}
+}
+@media(prefers-reduced-motion:reduce){
+  *{scroll-behavior:auto !important;}
+  .reveal{opacity:1 !important;transform:none !important;transition:none !important;}
+  .btn,.link-arrow,.arw{transition:none !important;}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="header">
+  <div class="header-inner">
+    <a class="brand" href="#top" aria-label="K&amp;K Wokół Domu — strona główna">
+      <img src="assets/logo.png" alt="Logo K&amp;K Wokół Domu">
+      <span class="brand-name">K&amp;K<small>Wokół Domu</small></span>
+    </a>
+    <nav class="nav" aria-label="Główna nawigacja">
+      <a href="#uslugi">Usługi</a>
+      <a href="#o-nas">O nas</a>
+      <a href="#wspolpraca">Współpraca</a>
+      <a href="#dla-firm">Dla firm</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a href="#kontakt" class="btn btn-outline on-dark header-cta">Darmowa wycena <span class="arw">→</span></a>
+    <button class="burger" id="burger" aria-label="Otwórz menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="#uslugi">Usługi</a>
+  <a href="#o-nas">O nas</a>
+  <a href="#wspolpraca">Współpraca</a>
+  <a href="#dla-firm">Dla firm</a>
+  <a href="#kontakt">Kontakt</a>
+  <a href="#kontakt" class="btn btn-primary">Zamów darmową wycenę <span class="arw">→</span></a>
+</div>
+
+<span id="top"></span>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-media">
+    <img src="assets/hero.png" alt="Nowoczesny dom z zadbanym ogrodem i podjazdem, ekipa K&amp;K Wokół Domu podczas pracy" fetchpriority="high">
+  </div>
+  <div class="hero-inner">
+    <span class="eyebrow on-dark">Kompleksowa obsługa terenów zewnętrznych</span>
+    <h1 class="display">Kompleksowe usługi wokół domu, ogrodu i firmy</h1>
+    <p class="lead">Elewacje, ogrody, tarasy, wywóz odpadów, sprzątanie parkingów i prace porządkowe — jedna ekipa, wiele usług, profesjonalny efekt.</p>
+    <div class="hero-cta">
+      <a href="#kontakt" class="btn btn-primary">Zamów darmową wycenę <span class="arw">→</span></a>
+      <a href="#uslugi" class="btn btn-outline on-dark">Sprawdź ofertę</a>
+    </div>
+  </div>
+
+  <div class="hero-cards">
+    <div class="hero-cards-grid reveal">
+      <div class="hcard">
+        <div class="hcard-top"><span class="dot"></span><h3>Dom i ogród</h3></div>
+        <p>Koszenie, pielęgnacja zieleni, rabaty, tarasy i porządki wokół posesji.</p>
+        <a href="#uslugi" class="link-arrow">Zobacz usługi <span class="arw">→</span></a>
+      </div>
+      <div class="hcard">
+        <div class="hcard-top"><span class="dot"></span><h3>Elewacje i kostka</h3></div>
+        <p>Mycie elewacji, kostki brukowej i podjazdów — czysty, odświeżony efekt.</p>
+        <a href="#uslugi" class="link-arrow">Zobacz usługi <span class="arw">→</span></a>
+      </div>
+      <div class="hcard">
+        <div class="hcard-top"><span class="dot"></span><h3>Firmy i tereny</h3></div>
+        <p>Sprzątanie parkingów, placów i terenów firmowych — jednorazowo lub stale.</p>
+        <a href="#dla-firm" class="link-arrow">Zobacz usługi <span class="arw">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="hero-spacer"></div>
+
+<!-- ============ 01 · O NAS ============ -->
+<section class="band-cream pad" id="o-nas">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-copy reveal">
+        <span class="eyebrow">01 — O nas</span>
+        <h2 class="display" style="margin:22px 0 28px;">Jedna ekipa.<br>Wiele usług.<br>Porządny efekt.</h2>
+        <p><strong>K&amp;K Wokół Domu</strong> to firma zajmująca się kompleksową obsługą terenów zewnętrznych. Pomagamy właścicielom domów, ogrodów i firm zadbać o czystość, estetykę oraz funkcjonalność przestrzeni wokół budynku.</p>
+        <p>Wykonujemy prace ogrodowe, czyszczenie elewacji, mycie kostki, zakładanie rabat, prace przy tarasach, wywóz odpadów oraz sprzątanie parkingów i terenów firmowych. Stawiamy na dokładność, terminowość i uczciwe podejście — tak, aby klient nie musiał szukać kilku różnych ekip do różnych zadań.</p>
+        <a href="#kontakt" class="btn btn-primary">Poproś o wycenę <span class="arw">→</span></a>
+      </div>
+      <div class="feature-list reveal">
+        <div class="feature">
+          <span class="mark"></span>
+          <div><h4>Kompleksowa obsługa w jednym miejscu</h4><p>Dom, ogród i teren firmy — wszystko zlecasz jednej, sprawdzonej ekipie.</p></div>
+        </div>
+        <div class="feature">
+          <span class="mark"></span>
+          <div><h4>Dokładna i estetyczna realizacja</h4><p>Pracujemy precyzyjnie i zostawiamy po sobie porządek na każdym etapie.</p></div>
+        </div>
+        <div class="feature">
+          <span class="mark"></span>
+          <div><h4>Indywidualna wycena pod każde zlecenie</h4><p>Uczciwa, przejrzysta wycena dopasowana do zakresu i miejsca prac.</p></div>
+        </div>
+        <div class="feature">
+          <span class="mark"></span>
+          <div><h4>Jednorazowo lub regularnie</h4><p>Szybki kontakt, sprawna realizacja i możliwość stałej opieki nad terenem.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 02 · USŁUGI ============ -->
+<section class="band-dark pad services" id="uslugi">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow on-dark">02 — Usługi</span>
+      <h2 class="display">Wszystko wokół Twojej posesji</h2>
+      <p class="lead">Od elewacji, przez ogród i taras, aż po wywóz odpadów i sprzątanie terenu. Osiem usług, które możesz łączyć w jednym zleceniu.</p>
+    </div>
+    <div class="svc-grid reveal">
+      <article class="svc">
+        <span class="num">01</span>
+        <h3>Mycie i&nbsp;czyszczenie elewacji</h3>
+        <p>Profesjonalne czyszczenie elewacji z zabrudzeń, kurzu, zielonego nalotu, glonów i osadów. Odświeżamy wygląd budynku i poprawiamy estetykę całej posesji.</p>
+      </article>
+      <article class="svc">
+        <span class="num">02</span>
+        <h3>Prace ogrodowe</h3>
+        <p>Koszenie trawy, porządkowanie ogrodu, przycinanie, grabienie, usuwanie chwastów i bieżąca pielęgnacja zieleni. Ogród schludny, czysty i estetyczny.</p>
+      </article>
+      <article class="svc">
+        <span class="num">03</span>
+        <h3>Zakładanie rabat i&nbsp;aranżacje</h3>
+        <p>Rabaty ozdobne, układanie agrowłókniny, wysypywanie kamienia lub kory, sadzenie roślin i przygotowanie estetycznych stref zieleni wokół domu.</p>
+      </article>
+      <article class="svc">
+        <span class="num">04</span>
+        <h3>Tarasy i&nbsp;prace wokół domu</h3>
+        <p>Pomoc przy budowie, odświeżaniu i przygotowaniu tarasów oraz przestrzeni wypoczynkowych. Prace porządkowe, przygotowawcze i wykończeniowe.</p>
+      </article>
+      <article class="svc">
+        <span class="num">05</span>
+        <h3>Wywóz i&nbsp;utylizacja odpadów</h3>
+        <p>Wywóz gałęzi, zielonych odpadów, starych elementów ogrodowych, gruzu i śmieci. Szybko porządkujemy teren po remoncie, sprzątaniu lub pracach w ogrodzie.</p>
+      </article>
+      <article class="svc">
+        <span class="num">06</span>
+        <h3>Sprzątanie parkingów i&nbsp;terenów firmowych</h3>
+        <p>Zamiatanie, zbieranie odpadów, usuwanie liści i porządkowanie parkingów, placów, chodników oraz terenów zewnętrznych przy firmach.</p>
+      </article>
+      <article class="svc">
+        <span class="num">07</span>
+        <h3>Mycie kostki brukowej i&nbsp;podjazdów</h3>
+        <p>Czyszczenie kostki, podjazdów, chodników i tarasów z zabrudzeń, mchu, nalotów i osadów. Przywracamy czysty, zadbany wygląd nawierzchni.</p>
+      </article>
+      <article class="svc">
+        <span class="num">08</span>
+        <h3>Kompleksowe porządki wokół posesji</h3>
+        <p>Dla osób, które chcą szybko ogarnąć zaniedbany teren: usuwanie odpadów, czyszczenie, grabienie, przycinanie, koszenie i przygotowanie do sezonu.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PHOTO STRIP ============ -->
+<section class="strip">
+  <img src="assets/mycie.jpg" alt="Mycie ciśnieniowe podjazdu i kostki brukowej przy domu">
+  <div class="strip-inner">
+    <div class="wrap reveal">
+      <span class="eyebrow">Efekt, który widać</span>
+      <h2 class="display">Zadbana posesja bez stresu</h2>
+      <p>Zajmujemy się całością — Ty widzisz gotowy, czysty i uporządkowany teren.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 03 · WSPÓŁPRACA ============ -->
+<section class="band-cream-2 pad" id="wspolpraca">
+  <div class="wrap">
+    <div class="process-grid">
+      <div class="process-photo reveal">
+        <img src="assets/ogrod.jpg" alt="Prace ogrodowe — przygotowanie gleby i pielęgnacja roślin w ogrodzie">
+        <span class="tag">Prace ogrodowe</span>
+      </div>
+      <div class="reveal">
+        <span class="eyebrow">03 — Jak wygląda współpraca</span>
+        <h2 class="display" style="margin:22px 0 34px;">Prosto, konkretnie, od kontaktu do gotowego terenu</h2>
+        <div class="steps">
+          <div class="step"><span class="n">01</span><div><h4>Kontakt</h4><p>Piszesz lub dzwonisz — przez telefon, formularz albo wiadomość.</p></div></div>
+          <div class="step"><span class="n">02</span><div><h4>Ustalenie zakresu</h4><p>Ustalamy zakres prac i podstawowe informacje o zleceniu.</p></div></div>
+          <div class="step"><span class="n">03</span><div><h4>Wycena</h4><p>Przygotowujemy wycenę — na podstawie zdjęć lub po obejrzeniu miejsca.</p></div></div>
+          <div class="step"><span class="n">04</span><div><h4>Termin</h4><p>Umawiamy dogodny dla Ciebie termin realizacji.</p></div></div>
+          <div class="step"><span class="n">05</span><div><h4>Realizacja</h4><p>Wykonujemy usługę dokładnie i zostawiamy po sobie porządek.</p></div></div>
+          <div class="step"><span class="n">06</span><div><h4>Gotowe</h4><p>Otrzymujesz gotowy, czysty i zadbany teren.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DLA FIRM ============ -->
+<section class="band-dark pad" id="dla-firm">
+  <div class="wrap">
+    <div class="biz-grid">
+      <div class="biz-copy reveal">
+        <span class="eyebrow on-dark">Usługi dla firm</span>
+        <h2 class="display" style="color:#fff;margin-top:22px;">Czysty teren robi pierwsze wrażenie</h2>
+        <p>Regularne lub jednorazowe sprzątanie parkingów, placów, chodników i terenów zewnętrznych przy firmach. Dbamy o estetykę otoczenia obiektów, bo czysty teren przed budynkiem wpływa na wrażenie klientów, pracowników i kontrahentów.</p>
+        <ul class="biz-list">
+          <li>Parkingi firmowe</li>
+          <li>Place przed lokalami</li>
+          <li>Tereny przy magazynach</li>
+          <li>Chodniki</li>
+          <li>Wejścia do budynków</li>
+          <li>Tereny zielone przy firmach</li>
+          <li>Przestrzenie wokół biur</li>
+          <li>Punkty usługowe</li>
+        </ul>
+        <a href="#kontakt" class="btn btn-outline on-dark" style="margin-top:34px;">Zapytaj o stałą obsługę <span class="arw">→</span></a>
+      </div>
+      <div class="biz-photo reveal">
+        <img src="assets/transport.png" alt="Bus firmy K&amp;K Wokół Domu podczas wywozu odpadów z posesji">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DLA KOGO ============ -->
+<section class="band-cream pad">
+  <div class="wrap">
+    <div class="aud-head reveal">
+      <div>
+        <span class="eyebrow">Dla kogo pracujemy</span>
+        <h2 class="display" style="margin-top:22px;">Domy, ogrody i firmy</h2>
+      </div>
+      <p>Realizujemy zarówno jednorazowe zlecenia, jak i regularną obsługę terenów zewnętrznych — dla osób prywatnych i klientów biznesowych.</p>
+    </div>
+    <div class="aud-grid reveal">
+      <div class="aud"><span class="n">A</span><h4>Właściciele domów</h4><p>Domy jednorodzinne z ogrodem, tarasem, podjazdem lub elewacją do odświeżenia.</p></div>
+      <div class="aud"><span class="n">B</span><h4>Firmy i lokale usługowe</h4><p>Parkingi, place i tereny zewnętrzne wymagające regularnej obsługi i porządku.</p></div>
+      <div class="aud"><span class="n">C</span><h4>Wspólnoty i obiekty</h4><p>Małe osiedla, magazyny, biura i obiekty firmowe — teren zawsze zadbany.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CLOSING CTA ============ -->
+<section class="band-dark pad closing">
+  <div class="wrap reveal">
+    <span class="eyebrow on-dark">Jedna ekipa · wiele usług</span>
+    <h2 class="display">Zadbaj o swoją posesję z K&amp;K Wokół Domu</h2>
+    <p>Napisz do nas, opisz zakres prac i prześlij zdjęcia terenu. Przygotujemy wycenę i zaproponujemy najlepsze rozwiązanie dla Twojego domu, ogrodu lub firmy.</p>
+    <div class="hero-cta">
+      <a href="#kontakt" class="btn btn-primary" style="background:var(--sage);color:var(--ink);">Zamów darmową wycenę <span class="arw">→</span></a>
+      <a href="#uslugi" class="btn btn-outline on-dark">Sprawdź ofertę</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ KONTAKT ============ -->
+<section class="band-cream pad" id="kontakt">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <span class="eyebrow">Kontakt</span>
+        <h2 class="display" style="margin-top:22px;">Opisz, czego potrzebujesz</h2>
+        <p>Przygotujemy indywidualną wycenę dopasowaną do Twojej posesji, ogrodu lub terenu firmowego.</p>
+        <div class="contact-detail"><span class="k">Telefon</span><span class="v"><a href="tel:+48000000000">+48 000 000 000</a></span></div>
+        <div class="contact-detail"><span class="k">E-mail</span><span class="v"><a href="mailto:kontakt@kkwokoldomu.pl">kontakt@kkwokoldomu.pl</a></span></div>
+        <div class="contact-detail"><span class="k">Obszar</span><span class="v">Dom · ogród · firma</span></div>
+      </div>
+      <div class="reveal">
+        <form id="contactForm" novalidate>
+          <div class="row2">
+            <div class="field">
+              <label for="name">Imię i nazwisko</label>
+              <input type="text" id="name" name="name" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="phone">Telefon</label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="service">Zakres prac</label>
+            <input type="text" id="service" name="service" placeholder="np. mycie elewacji + koszenie trawy">
+          </div>
+          <div class="field">
+            <label for="message">Opis terenu</label>
+            <textarea id="message" name="message" placeholder="Opisz teren i zakres prac. Zdjęcia możesz dołączyć w odpowiedzi na naszą wiadomość."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Wyślij zapytanie <span class="arw">→</span></button>
+          <p class="form-note">Wysłanie formularza otworzy Twój program pocztowy z gotową wiadomością do nas.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="#top">
+          <img src="assets/logo.png" alt="Logo K&amp;K Wokół Domu" style="width:46px;height:46px;border-radius:50%;background:#fff;padding:2px;">
+          <span class="brand-name">K&amp;K<small>Wokół Domu</small></span>
+        </a>
+        <p>Kompleksowe usługi wokół domu i ogrodu. Elewacje, ogród, tarasy, wywóz i porządek wokół posesji.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Usługi</h5>
+        <a href="#uslugi">Mycie elewacji</a>
+        <a href="#uslugi">Prace ogrodowe</a>
+        <a href="#uslugi">Zakładanie rabat</a>
+        <a href="#uslugi">Mycie kostki</a>
+        <a href="#uslugi">Wywóz odpadów</a>
+      </div>
+      <div class="footer-col">
+        <h5>Firma</h5>
+        <a href="#o-nas">O nas</a>
+        <a href="#wspolpraca">Współpraca</a>
+        <a href="#dla-firm">Usługi dla firm</a>
+        <a href="#kontakt">Kontakt</a>
+      </div>
+      <div class="footer-col">
+        <h5>Kontakt</h5>
+        <a href="tel:+48000000000">+48 000 000 000</a>
+        <a href="mailto:kontakt@kkwokoldomu.pl">kontakt@kkwokoldomu.pl</a>
+        <span>kkwokoldomu.pl</span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 K&amp;K Wokół Domu</span>
+      <span>Jedna ekipa. Wiele usług. Porządny efekt.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // Header background on scroll
+  var header=document.getElementById('header');
+  var onScroll=function(){header.classList.toggle('scrolled',window.scrollY>40);};
+  onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+
+  // Mobile menu
+  var burger=document.getElementById('burger');
+  var mobileNav=document.getElementById('mobileNav');
+  var toggle=function(open){
+    document.body.classList.toggle('mobile-open',open);
+    mobileNav.classList.toggle('open',open);
+    burger.setAttribute('aria-expanded',open?'true':'false');
+    burger.setAttribute('aria-label',open?'Zamknij menu':'Otwórz menu');
+  };
+  burger.addEventListener('click',function(){toggle(!document.body.classList.contains('mobile-open'));});
+  mobileNav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){toggle(false);});});
+
+  // Scroll reveal
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els=document.querySelectorAll('.reveal');
+  if(reduce||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in');});}
+  else{
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});
+    },{threshold:0,rootMargin:'0px 0px -60px 0px'});
+    els.forEach(function(e){io.observe(e);});
+  }
+
+  // Contact form -> mailto
+  var form=document.getElementById('contactForm');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var g=function(id){return (document.getElementById(id).value||'').trim();};
+    var name=g('name'),phone=g('phone'),email=g('email'),service=g('service'),message=g('message');
+    if(!name||!phone){alert('Podaj imię oraz numer telefonu, abyśmy mogli przygotować wycenę.');return;}
+    var body=
+      'Imię i nazwisko: '+name+'\n'+
+      'Telefon: '+phone+'\n'+
+      'E-mail: '+email+'\n'+
+      'Zakres prac: '+service+'\n\n'+
+      'Opis terenu:\n'+message+'\n';
+    var href='mailto:kontakt@kkwokoldomu.pl'+
+      '?subject='+encodeURIComponent('Zapytanie o wycenę — '+name)+
+      '&body='+encodeURIComponent(body);
+    window.location.href=href;
+  });
+})();
+</script>
+</body>
+</html>
