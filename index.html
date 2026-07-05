@@ -52,21 +52,22 @@
 
 <style>
 :root{
-  --cream:#f4efe4;
-  --cream-2:#efe8d9;
-  --card:#fffdf7;
-  --ink:#161a13;
-  --ink-2:#1f241b;
-  --ink-3:#2b3125;
-  --sage:#8a9a67;
-  --sage-deep:#566043;
-  --sage-text:#4e5a3c;
-  --forest:#333b28;
-  --muted:#6f6e60;
-  --muted-light:#a8a595;
-  --line:#ddd5c4;
-  --line-dark:rgba(244,239,228,.14);
-  --cream-on-dark:#e9e3d4;
+  --navy:#0e1c36;
+  --cream:#eef2fb;
+  --cream-2:#12233f;
+  --card:#16294a;
+  --ink:#0a1526;
+  --ink-2:#16294a;
+  --ink-3:#1d3358;
+  --sage:#a7bd83;
+  --sage-deep:#8aa564;
+  --sage-text:#a7bd83;
+  --forest:#bccf9b;
+  --muted:#aebbd4;
+  --muted-light:#8493ad;
+  --line:rgba(255,255,255,.13);
+  --line-dark:rgba(255,255,255,.10);
+  --cream-on-dark:#dbe3f2;
 
   --f-display:"Fraunces",Georgia,"Times New Roman",serif;
   --f-body:"Inter Tight",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
@@ -80,8 +81,8 @@
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{
   font-family:var(--f-body);
-  background:var(--cream);
-  color:var(--ink);
+  background:var(--navy);
+  color:var(--cream);
   line-height:1.6;
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
@@ -133,10 +134,10 @@ h2.display{font-size:clamp(2.1rem,4.6vw,3.6rem);}
 }
 .btn .arw{transition:transform .25s ease}
 .btn:hover .arw{transform:translateX(4px)}
-.btn-primary{background:var(--sage-deep);color:var(--cream);}
+.btn-primary{background:var(--sage-deep);color:var(--ink);}
 .btn-primary:hover{background:var(--forest);}
-.btn-outline{border-color:currentColor;color:var(--ink);}
-.btn-outline:hover{background:var(--ink);color:var(--cream);border-color:var(--ink);}
+.btn-outline{border-color:currentColor;color:var(--cream);}
+.btn-outline:hover{background:var(--cream);color:var(--ink);border-color:var(--cream);}
 .btn-outline.on-dark{color:var(--cream-on-dark);}
 .btn-outline.on-dark:hover{background:var(--cream);color:var(--ink);border-color:var(--cream);}
 .btn-ghost{padding-left:0;padding-right:0;color:var(--sage-text);border:0;}
@@ -151,7 +152,7 @@ h2.display{font-size:clamp(2.1rem,4.6vw,3.6rem);}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--gutter);}
 section{position:relative}
 .band-dark{background:var(--ink);color:var(--cream-on-dark);}
-.band-cream{background:var(--cream);}
+.band-cream{background:var(--navy);}
 .band-cream-2{background:var(--cream-2);}
 .pad{padding:clamp(72px,10vw,140px) 0;}
 
@@ -184,8 +185,8 @@ section{position:relative}
 .hero-media::after{
   content:"";position:absolute;inset:0;
   background:
-    linear-gradient(180deg,rgba(16,19,13,.55) 0%,rgba(16,19,13,.15) 30%,rgba(16,19,13,.55) 68%,rgba(16,19,13,.94) 100%),
-    linear-gradient(90deg,rgba(16,19,13,.72) 0%,rgba(16,19,13,.28) 46%,rgba(16,19,13,0) 78%);
+    linear-gradient(180deg,rgba(8,15,30,.60) 0%,rgba(8,15,30,.18) 30%,rgba(8,15,30,.58) 68%,rgba(8,15,30,.95) 100%),
+    linear-gradient(90deg,rgba(8,15,30,.76) 0%,rgba(8,15,30,.30) 46%,rgba(8,15,30,0) 78%);
 }
 .hero-inner{position:relative;z-index:2;width:100%;max-width:var(--maxw);margin:0 auto;padding:0 var(--gutter) clamp(40px,6vw,72px);}
 .hero h1{margin:.5em 0 .32em;max-width:15ch;color:#fff;}
@@ -202,7 +203,7 @@ section{position:relative}
 }
 .hero-cards-grid{
   display:grid;grid-template-columns:repeat(3,1fr);
-  background:rgba(20,24,17,.72);
+  background:rgba(10,18,34,.72);
   backdrop-filter:blur(2px);
   border:1px solid var(--line-dark);
 }
@@ -215,7 +216,7 @@ section{position:relative}
 .hcard .link-arrow{color:var(--sage);}
 
 /* spacer so overlapping cards don't collide with next section */
-.hero-spacer{height:clamp(70px,9vw,120px);background:var(--cream);}
+.hero-spacer{height:clamp(70px,9vw,120px);background:var(--navy);}
 
 /* ---------- Section header ---------- */
 .sec-head{max-width:60ch;}
@@ -238,24 +239,24 @@ section{position:relative}
 .services .sec-head h2{color:#fff;}
 .services .lead{color:rgba(255,255,255,.7);margin-top:18px;}
 .svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line-dark);border:1px solid var(--line-dark);margin-top:clamp(40px,5vw,64px);}
-.svc{background:var(--ink);display:flex;flex-direction:column;overflow:hidden;transition:background .3s ease;}
-.svc:hover{background:var(--ink-2);}
-.svc-img{position:relative;aspect-ratio:16/11;overflow:hidden;background:var(--ink-2);}
+.svc{background:var(--cream-2);display:flex;flex-direction:column;overflow:hidden;transition:background .3s ease;}
+.svc:hover{background:var(--card);}
+.svc-img{position:relative;aspect-ratio:16/11;overflow:hidden;background:var(--card);}
 .svc-img img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(0,0,.2,1);}
 .svc:hover .svc-img img{transform:scale(1.06);}
-.svc-img .num{position:absolute;top:12px;left:12px;font-family:var(--f-mono);font-size:.68rem;color:#fff;background:rgba(18,21,14,.72);padding:5px 9px;letter-spacing:.1em;}
+.svc-img .num{position:absolute;top:12px;left:12px;font-family:var(--f-mono);font-size:.68rem;color:#fff;background:rgba(8,15,28,.74);padding:5px 9px;letter-spacing:.1em;}
 .svc-body{padding:22px 24px 30px;display:flex;flex-direction:column;flex:1;}
 .svc h3{font-family:var(--f-display);font-size:1.32rem;font-weight:500;color:#fff;line-height:1.14;margin:0 0 10px;}
 .svc p{font-size:.88rem;color:rgba(255,255,255,.6);line-height:1.55;}
 .svc-cta{background:var(--sage-deep);justify-content:center;padding:34px 26px;}
-.svc-cta h3{color:var(--cream);}
-.svc-cta p{color:rgba(244,239,228,.82);margin-bottom:18px;}
-.svc-cta .link-arrow{color:#fff;}
+.svc-cta h3{color:var(--ink);}
+.svc-cta p{color:rgba(10,21,38,.82);margin-bottom:18px;}
+.svc-cta .link-arrow{color:var(--ink);}
 
 /* ---------- Full-bleed photo strip ---------- */
 .strip{position:relative;height:clamp(340px,46vw,560px);overflow:hidden;}
 .strip img{width:100%;height:100%;object-fit:cover;}
-.strip::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(16,19,13,.82) 0%,rgba(16,19,13,.35) 50%,rgba(16,19,13,.1) 100%);}
+.strip::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,15,30,.86) 0%,rgba(8,15,30,.42) 50%,rgba(8,15,30,.12) 100%);}
 .strip-inner{position:absolute;inset:0;z-index:2;display:flex;align-items:center;}
 .strip-inner .wrap{width:100%;}
 .strip-inner .eyebrow{color:var(--sage);margin-bottom:18px;}
@@ -266,7 +267,7 @@ section{position:relative}
 .process-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(40px,6vw,80px);align-items:center;}
 .process-photo{position:relative;}
 .process-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;}
-.process-photo .tag{position:absolute;left:0;bottom:0;background:var(--sage-deep);color:var(--cream);font-family:var(--f-mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;padding:12px 20px;}
+.process-photo .tag{position:absolute;left:0;bottom:0;background:var(--sage-deep);color:var(--ink);font-family:var(--f-mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;padding:12px 20px;}
 .steps{counter-reset:step;}
 .step{display:grid;grid-template-columns:auto 1fr;gap:22px;padding:20px 0;border-bottom:1px solid var(--line);}
 .step:first-child{padding-top:0;}
@@ -295,7 +296,7 @@ section{position:relative}
 .closing{position:relative;text-align:center;overflow:hidden;}
 .closing-media{position:absolute;inset:0;z-index:0;}
 .closing-media img{width:100%;height:100%;object-fit:cover;object-position:center 60%;}
-.closing-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,19,13,.82) 0%,rgba(16,19,13,.88) 100%);}
+.closing-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,15,30,.82) 0%,rgba(8,15,30,.90) 100%);}
 .closing .wrap{position:relative;z-index:1;}
 .closing .eyebrow{justify-content:center;color:var(--sage);}
 .closing .eyebrow::before{display:none;}
@@ -316,14 +317,15 @@ form{display:grid;gap:18px;}
 .row2{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
 label{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);}
 input,textarea{
-  font-family:var(--f-body);font-size:1rem;color:var(--ink);
+  font-family:var(--f-body);font-size:1rem;color:var(--cream);
   background:var(--card);border:1px solid var(--line);
   padding:14px 16px;border-radius:2px;width:100%;
   transition:border-color .2s ease,box-shadow .2s ease;
 }
-input:focus,textarea:focus{outline:none;border-color:var(--sage);box-shadow:0 0 0 3px rgba(138,154,103,.18);}
+input::placeholder,textarea::placeholder{color:var(--muted-light);}
+input:focus,textarea:focus{outline:none;border-color:var(--sage);box-shadow:0 0 0 3px rgba(167,189,131,.22);}
 textarea{resize:vertical;min-height:130px;}
-form .btn-primary{justify-self:start;background:var(--sage-deep);color:var(--cream);}
+form .btn-primary{justify-self:start;background:var(--sage-deep);color:var(--ink);}
 .form-note{font-size:.85rem;color:var(--muted);}
 
 /* ---------- Footer ---------- */
@@ -336,6 +338,18 @@ form .btn-primary{justify-self:start;background:var(--sage-deep);color:var(--cre
 .footer-col a:hover{color:#fff;}
 .footer-bottom{display:flex;justify-content:space-between;align-items:center;gap:20px;padding-top:28px;flex-wrap:wrap;}
 .footer-bottom span{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.45);}
+
+/* ---------- Cennik ---------- */
+.price-list{border-top:1px solid var(--line);margin-top:clamp(36px,5vw,56px);}
+.price-row{display:grid;grid-template-columns:1fr auto;gap:28px;align-items:baseline;padding:26px 4px;border-bottom:1px solid var(--line);transition:background .25s ease,padding-left .25s ease;}
+.price-row:hover{background:rgba(255,255,255,.03);padding-left:14px;}
+.price-info h3{font-family:var(--f-display);font-size:clamp(1.28rem,2.4vw,1.7rem);font-weight:500;color:var(--cream);margin-bottom:6px;line-height:1.14;}
+.price-info p{color:var(--muted);font-size:.95rem;max-width:54ch;}
+.price-val{text-align:right;white-space:nowrap;}
+.price-val strong{font-family:var(--f-display);font-weight:500;font-size:clamp(1.3rem,2.3vw,1.7rem);color:var(--sage);letter-spacing:-.01em;}
+.price-val small{display:block;font-family:var(--f-mono);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted-light);margin-top:6px;}
+.price-note{margin-top:30px;font-size:.9rem;color:var(--muted);max-width:62ch;}
+.price-note strong{color:var(--cream-on-dark);font-weight:600;}
 
 /* mobile nav hidden by default (desktop) */
 .mobile-nav{display:none;}
@@ -385,6 +399,9 @@ form .btn-primary{justify-self:start;background:var(--sage-deep);color:var(--cre
 @media(max-width:560px){
   .svc-grid{grid-template-columns:1fr;}
   .row2{grid-template-columns:1fr;}
+  .price-row{grid-template-columns:1fr;gap:10px;}
+  .price-val{text-align:left;}
+  .price-val small{margin-top:3px;}
   .aud-head{gap:16px;}
   h1.display{font-size:clamp(2.3rem,9vw,3rem);}
   .hero{min-height:auto;padding-top:150px;padding-bottom:20px;}
@@ -409,6 +426,7 @@ form .btn-primary{justify-self:start;background:var(--sage-deep);color:var(--cre
       <a href="#uslugi">Usługi</a>
       <a href="#o-nas">O nas</a>
       <a href="#wspolpraca">Współpraca</a>
+      <a href="#cennik">Cennik</a>
       <a href="#dla-firm">Dla firm</a>
       <a href="#kontakt">Kontakt</a>
     </nav>
@@ -423,6 +441,7 @@ form .btn-primary{justify-self:start;background:var(--sage-deep);color:var(--cre
   <a href="#uslugi">Usługi</a>
   <a href="#o-nas">O nas</a>
   <a href="#wspolpraca">Współpraca</a>
+  <a href="#cennik">Cennik</a>
   <a href="#dla-firm">Dla firm</a>
   <a href="#kontakt">Kontakt</a>
   <a href="#kontakt" class="btn btn-primary">Zamów darmową wycenę <span class="arw">→</span></a>
@@ -606,6 +625,78 @@ form .btn-primary{justify-self:start;background:var(--sage-deep);color:var(--cre
   </div>
 </section>
 
+<!-- ============ CENNIK ============ -->
+<!-- CENNIK: zamień placeholdery "000–000" na rzeczywiste widełki cenowe -->
+<section class="band-cream pad" id="cennik">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Cennik</span>
+      <h2 class="display">Przejrzyste widełki cenowe</h2>
+      <p class="lead">Orientacyjne przedziały cen dla najczęstszych zleceń. Ostateczną wycenę ustalamy indywidualnie — zależnie od zakresu, wielkości i stanu terenu.</p>
+    </div>
+
+    <div class="price-list reveal">
+      <div class="price-row">
+        <div class="price-info">
+          <h3>Mycie i czyszczenie elewacji</h3>
+          <p>Usuwanie kurzu, glonów, zielonego nalotu i osadów z elewacji budynku.</p>
+        </div>
+        <div class="price-val"><strong>000–000 zł</strong><small>wg powierzchni</small></div>
+      </div>
+
+      <div class="price-row">
+        <div class="price-info">
+          <h3>Prace ogrodowe</h3>
+          <p>Koszenie, przycinanie, grabienie, usuwanie chwastów i pielęgnacja zieleni.</p>
+        </div>
+        <div class="price-val"><strong>000–000 zł</strong><small>za usługę</small></div>
+      </div>
+
+      <div class="price-row">
+        <div class="price-info">
+          <h3>Zakładanie rabat i aranżacje ogrodowe</h3>
+          <p>Agrowłóknina, kamień lub kora, sadzenie roślin i estetyczne strefy zieleni.</p>
+        </div>
+        <div class="price-val"><strong>000–000 zł</strong><small>wg projektu</small></div>
+      </div>
+
+      <div class="price-row">
+        <div class="price-info">
+          <h3>Wywóz i utylizacja odpadów</h3>
+          <p>Gałęzie, zielone odpady, gruz i śmieci — od załadunku po wywóz.</p>
+        </div>
+        <div class="price-val"><strong>000–000 zł</strong><small>za kurs</small></div>
+      </div>
+
+      <div class="price-row">
+        <div class="price-info">
+          <h3>Sprzątanie parkingów i terenów firmowych</h3>
+          <p>Zamiatanie, zbieranie odpadów i porządkowanie terenów zewnętrznych przy firmach.</p>
+        </div>
+        <div class="price-val"><strong>000–000 zł</strong><small>jednorazowo / m-c</small></div>
+      </div>
+
+      <div class="price-row">
+        <div class="price-info">
+          <h3>Mycie kostki brukowej i podjazdów</h3>
+          <p>Czyszczenie kostki, podjazdów i chodników z mchu, nalotów i osadów.</p>
+        </div>
+        <div class="price-val"><strong>000–000 zł</strong><small>za m²</small></div>
+      </div>
+
+      <div class="price-row">
+        <div class="price-info">
+          <h3>Kompleksowe porządki wokół posesji</h3>
+          <p>Pełne uporządkowanie zaniedbanego terenu — od koszenia po wywóz odpadów.</p>
+        </div>
+        <div class="price-val"><strong>000–000 zł</strong><small>wg zakresu</small></div>
+      </div>
+    </div>
+
+    <p class="price-note"><strong>Ceny orientacyjne.</strong> Podane widełki mają charakter poglądowy — dokładną, bezpłatną wycenę przygotujemy po zapoznaniu się z zakresem prac i terenem. Napisz lub zadzwoń, a wspólnie ustalimy szczegóły.</p>
+  </div>
+</section>
+
 <!-- ============ DLA FIRM ============ -->
 <section class="band-dark pad" id="dla-firm">
   <div class="wrap">
@@ -738,6 +829,7 @@ form .btn-primary{justify-self:start;background:var(--sage-deep);color:var(--cre
         <h5>Firma</h5>
         <a href="#o-nas">O nas</a>
         <a href="#wspolpraca">Współpraca</a>
+        <a href="#cennik">Cennik</a>
         <a href="#dla-firm">Usługi dla firm</a>
         <a href="#kontakt">Kontakt</a>
       </div>

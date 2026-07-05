@@ -40,3 +40,8 @@ Następnie otwórz `http://localhost:5173`.
 - Obszar działania: **powiat grodziski i okolice**
 
 Formularz kontaktowy działa przez `mailto:` — opcjonalnie można podłączyć backend / usługę formularzy.
+
+## Cennik — do uzupełnienia
+
+Sekcja „Cennik" (`#cennik`) zawiera placeholdery **`000–000 zł`**. Zamień je na rzeczywiste
+widełki cenowe (szukaj komentarza `<!-- CENNIK: ... -->` w `index.html`).
