@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>K&amp;K Wokół Domu — Usługi ogrodowe, elewacje, wywóz i sprzątanie parkingów</title>
-<meta name="description" content="Kompleksowe usługi wokół domu, ogrodu i firmy. Mycie elewacji, prace ogrodowe, zakładanie rabat, wywóz odpadów, mycie kostki i sprzątanie parkingów.">
-<meta name="keywords" content="usługi wokół domu, usługi ogrodowe, mycie elewacji, mycie kostki brukowej, sprzątanie parkingów, sprzątanie terenów zewnętrznych, wywóz odpadów, zakładanie rabat, prace ogrodowe, kompleksowa obsługa posesji, pielęgnacja ogrodu, porządki wokół domu, sprzątanie posesji, obsługa terenów zewnętrznych dla firm">
+<meta name="description" content="Kompleksowe usługi wokół domu, ogrodu i firmy w powiecie grodziskim. Mycie elewacji, prace ogrodowe, zakładanie rabat, wywóz odpadów, mycie kostki i sprzątanie parkingów.">
+<meta name="keywords" content="usługi wokół domu, usługi ogrodowe, mycie elewacji, mycie kostki brukowej, sprzątanie parkingów, sprzątanie terenów zewnętrznych, wywóz odpadów, zakładanie rabat, prace ogrodowe, kompleksowa obsługa posesji, pielęgnacja ogrodu, porządki wokół domu, sprzątanie posesji, obsługa terenów zewnętrznych dla firm, powiat grodziski, usługi wokół domu Grodzisk Mazowiecki">
 <link rel="canonical" href="https://kkwokoldomu.pl/">
 <meta name="robots" content="index, follow">
 
@@ -16,7 +16,7 @@
 <meta property="og:title" content="K&amp;K Wokół Domu — Kompleksowe usługi wokół domu, ogrodu i firmy">
 <meta property="og:description" content="Elewacje, ogrody, wywóz odpadów, sprzątanie parkingów i prace porządkowe — jedna ekipa, wiele usług, profesjonalny efekt.">
 <meta property="og:url" content="https://kkwokoldomu.pl/">
-<meta property="og:image" content="https://kkwokoldomu.pl/assets/hero.png">
+<meta property="og:image" content="https://kkwokoldomu.pl/assets/hero.jpg">
 
 <link rel="icon" type="image/png" href="assets/logo.png">
 
@@ -35,9 +35,9 @@
   "url": "https://kkwokoldomu.pl",
   "email": "krzysiekikonrad@gmail.com",
   "telephone": "+48532574313",
-  "areaServed": "Polska",
+  "areaServed": { "@type": "AdministrativeArea", "name": "Powiat grodziski" },
   "priceRange": "$$",
-  "image": "https://kkwokoldomu.pl/assets/hero.png",
+  "image": "https://kkwokoldomu.pl/assets/hero.jpg",
   "makesOffer": [
     { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mycie i czyszczenie elewacji" } },
     { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Prace ogrodowe" } },
@@ -293,6 +293,10 @@ section{position:relative}
 
 /* ---------- CTA closing ---------- */
 .closing{position:relative;text-align:center;overflow:hidden;}
+.closing-media{position:absolute;inset:0;z-index:0;}
+.closing-media img{width:100%;height:100%;object-fit:cover;object-position:center 60%;}
+.closing-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,19,13,.82) 0%,rgba(16,19,13,.88) 100%);}
+.closing .wrap{position:relative;z-index:1;}
 .closing .eyebrow{justify-content:center;color:var(--sage);}
 .closing .eyebrow::before{display:none;}
 .closing h2{color:#fff;margin:22px auto 0;max-width:16ch;}
@@ -429,7 +433,7 @@ form .btn-primary{justify-self:start;background:var(--sage-deep);color:var(--cre
 <!-- ============ HERO ============ -->
 <section class="hero">
   <div class="hero-media">
-    <img src="assets/hero.png" alt="Nowoczesny dom z zadbanym ogrodem i podjazdem, ekipa K&amp;K Wokół Domu podczas pracy" fetchpriority="high">
+    <img src="assets/hero.jpg" alt="Nowoczesny dom z zadbanym ogrodem i podjazdem, ekipa K&amp;K Wokół Domu podczas pracy" fetchpriority="high">
   </div>
   <div class="hero-inner">
     <span class="eyebrow on-dark">Kompleksowa obsługa terenów zewnętrznych</span>
@@ -472,6 +476,7 @@ form .btn-primary{justify-self:start;background:var(--sage-deep);color:var(--cre
         <h2 class="display" style="margin:22px 0 28px;">Jedna ekipa.<br>Wiele usług.<br>Porządny efekt.</h2>
         <p><strong>K&amp;K Wokół Domu</strong> to firma zajmująca się kompleksową obsługą terenów zewnętrznych. Pomagamy właścicielom domów, ogrodów i firm zadbać o czystość, estetykę oraz funkcjonalność przestrzeni wokół budynku.</p>
         <p>Wykonujemy prace ogrodowe, czyszczenie elewacji, mycie kostki, zakładanie rabat, wywóz odpadów oraz sprzątanie parkingów i terenów firmowych. Stawiamy na dokładność, terminowość i uczciwe podejście — tak, aby klient nie musiał szukać kilku różnych ekip do różnych zadań.</p>
+        <p>Działamy na terenie <strong>powiatu grodziskiego</strong> i okolic — u właścicieli domów, w ogrodach oraz przy obiektach firmowych.</p>
         <a href="#kontakt" class="btn btn-primary">Poproś o wycenę <span class="arw">→</span></a>
       </div>
       <div class="feature-list reveal">
@@ -506,7 +511,7 @@ form .btn-primary{justify-self:start;background:var(--sage-deep);color:var(--cre
     </div>
     <div class="svc-grid reveal">
       <article class="svc">
-        <div class="svc-img"><img src="assets/elewacja.png" alt="Mycie i czyszczenie elewacji domu jednorodzinnego" loading="lazy"><span class="num">01</span></div>
+        <div class="svc-img"><img src="assets/elewacja.jpg" alt="Mycie i czyszczenie elewacji domu jednorodzinnego" loading="lazy"><span class="num">01</span></div>
         <div class="svc-body">
           <h3>Mycie i&nbsp;czyszczenie elewacji</h3>
           <p>Profesjonalne czyszczenie elewacji z zabrudzeń, kurzu, zielonego nalotu, glonów i osadów. Odświeżamy wygląd budynku i poprawiamy estetykę całej posesji.</p>
@@ -520,28 +525,28 @@ form .btn-primary{justify-self:start;background:var(--sage-deep);color:var(--cre
         </div>
       </article>
       <article class="svc">
-        <div class="svc-img"><img src="assets/podjazd.png" alt="Zadbane rabaty i aranżacja zieleni przy podjeździe domu" loading="lazy"><span class="num">03</span></div>
+        <div class="svc-img"><img src="assets/podjazd.jpg" alt="Zadbane rabaty i aranżacja zieleni przy podjeździe domu" loading="lazy"><span class="num">03</span></div>
         <div class="svc-body">
           <h3>Zakładanie rabat i&nbsp;aranżacje</h3>
           <p>Rabaty ozdobne, układanie agrowłókniny, wysypywanie kamienia lub kory, sadzenie roślin i przygotowanie estetycznych stref zieleni wokół domu.</p>
         </div>
       </article>
       <article class="svc">
-        <div class="svc-img"><img src="assets/wywoz.png" alt="Wywóz gałęzi, zielonych odpadów i śmieci z posesji na przyczepie" loading="lazy"><span class="num">04</span></div>
+        <div class="svc-img"><img src="assets/wywoz.jpg" alt="Wywóz gałęzi, zielonych odpadów i śmieci z posesji na przyczepie" loading="lazy"><span class="num">04</span></div>
         <div class="svc-body">
           <h3>Wywóz i&nbsp;utylizacja odpadów</h3>
           <p>Wywóz gałęzi, zielonych odpadów, starych elementów ogrodowych, gruzu i śmieci. Szybko porządkujemy teren po remoncie, sprzątaniu lub pracach w ogrodzie.</p>
         </div>
       </article>
       <article class="svc">
-        <div class="svc-img"><img src="assets/parking.png" alt="Czysty parking i teren zewnętrzny przy budynku firmowym" loading="lazy"><span class="num">05</span></div>
+        <div class="svc-img"><img src="assets/parking.jpg" alt="Czysty parking i teren zewnętrzny przy budynku firmowym" loading="lazy"><span class="num">05</span></div>
         <div class="svc-body">
           <h3>Sprzątanie parkingów i&nbsp;terenów firmowych</h3>
           <p>Zamiatanie, zbieranie odpadów, usuwanie liści i porządkowanie parkingów, placów, chodników oraz terenów zewnętrznych przy firmach.</p>
         </div>
       </article>
       <article class="svc">
-        <div class="svc-img"><img src="assets/kostka.png" alt="Mycie ciśnieniowe kostki brukowej i podjazdu" loading="lazy"><span class="num">06</span></div>
+        <div class="svc-img"><img src="assets/kostka.jpg" alt="Mycie ciśnieniowe kostki brukowej i podjazdu" loading="lazy"><span class="num">06</span></div>
         <div class="svc-body">
           <h3>Mycie kostki brukowej i&nbsp;podjazdów</h3>
           <p>Czyszczenie kostki, podjazdów, chodników i nawierzchni z zabrudzeń, mchu, nalotów i osadów. Przywracamy czysty, zadbany wygląd nawierzchni.</p>
@@ -582,8 +587,8 @@ form .btn-primary{justify-self:start;background:var(--sage-deep);color:var(--cre
   <div class="wrap">
     <div class="process-grid">
       <div class="process-photo reveal">
-        <img src="assets/ogrod.jpg" alt="Prace ogrodowe — przygotowanie gleby i pielęgnacja roślin w ogrodzie">
-        <span class="tag">Prace ogrodowe</span>
+        <img src="assets/transport.jpg" alt="Bus firmy K&amp;K Wokół Domu z wyposażeniem na terenie posesji">
+        <span class="tag">Dojazd i realizacja</span>
       </div>
       <div class="reveal">
         <span class="eyebrow">03 — Jak wygląda współpraca</span>
@@ -622,7 +627,7 @@ form .btn-primary{justify-self:start;background:var(--sage-deep);color:var(--cre
         <a href="#kontakt" class="btn btn-outline on-dark" style="margin-top:34px;">Zapytaj o stałą obsługę <span class="arw">→</span></a>
       </div>
       <div class="biz-photo reveal">
-        <img src="assets/parking.png" alt="Zadbany parking i teren zewnętrzny przy nowoczesnym budynku firmowym">
+        <img src="assets/parking.jpg" alt="Zadbany parking i teren zewnętrzny przy nowoczesnym budynku firmowym">
       </div>
     </div>
   </div>
@@ -648,6 +653,7 @@ form .btn-primary{justify-self:start;background:var(--sage-deep);color:var(--cre
 
 <!-- ============ CLOSING CTA ============ -->
 <section class="band-dark pad closing">
+  <div class="closing-media"><img src="assets/taras.jpg" alt="Zadbany taras i otoczenie domu o zmierzchu" loading="lazy"></div>
   <div class="wrap reveal">
     <span class="eyebrow on-dark">Jedna ekipa · wiele usług</span>
     <h2 class="display">Zadbaj o swoją posesję z K&amp;K Wokół Domu</h2>
@@ -669,7 +675,7 @@ form .btn-primary{justify-self:start;background:var(--sage-deep);color:var(--cre
         <p>Przygotujemy indywidualną wycenę dopasowaną do Twojej posesji, ogrodu lub terenu firmowego.</p>
         <div class="contact-detail"><span class="k">Telefon</span><span class="v"><a href="tel:+48532574313">+48 532 574 313</a></span></div>
         <div class="contact-detail"><span class="k">E-mail</span><span class="v"><a href="mailto:krzysiekikonrad@gmail.com">krzysiekikonrad@gmail.com</a></span></div>
-        <div class="contact-detail"><span class="k">Obszar</span><span class="v">Dom · ogród · firma</span></div>
+        <div class="contact-detail"><span class="k">Obszar</span><span class="v">Powiat grodziski i okolice</span></div>
       </div>
       <div class="reveal">
         <form id="contactForm" novalidate>
@@ -683,9 +689,15 @@ form .btn-primary{justify-self:start;background:var(--sage-deep);color:var(--cre
               <input type="tel" id="phone" name="phone" autocomplete="tel" required>
             </div>
           </div>
-          <div class="field">
-            <label for="email">E-mail</label>
-            <input type="email" id="email" name="email" autocomplete="email">
+          <div class="row2">
+            <div class="field">
+              <label for="city">Miejscowość</label>
+              <input type="text" id="city" name="city" autocomplete="address-level2" placeholder="np. Grodzisk Mazowiecki" required>
+            </div>
+            <div class="field">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" autocomplete="email">
+            </div>
           </div>
           <div class="field">
             <label for="service">Zakres prac</label>
@@ -733,6 +745,7 @@ form .btn-primary{justify-self:start;background:var(--sage-deep);color:var(--cre
         <h5>Kontakt</h5>
         <a href="tel:+48532574313">+48 532 574 313</a>
         <a href="mailto:krzysiekikonrad@gmail.com">krzysiekikonrad@gmail.com</a>
+        <span>Powiat grodziski i okolice</span>
         <span>kkwokoldomu.pl</span>
       </div>
     </div>
@@ -778,11 +791,12 @@ form .btn-primary{justify-self:start;background:var(--sage-deep);color:var(--cre
   form.addEventListener('submit',function(e){
     e.preventDefault();
     var g=function(id){return (document.getElementById(id).value||'').trim();};
-    var name=g('name'),phone=g('phone'),email=g('email'),service=g('service'),message=g('message');
-    if(!name||!phone){alert('Podaj imię oraz numer telefonu, abyśmy mogli przygotować wycenę.');return;}
+    var name=g('name'),phone=g('phone'),city=g('city'),email=g('email'),service=g('service'),message=g('message');
+    if(!name||!phone||!city){alert('Podaj imię, numer telefonu i miejscowość, abyśmy mogli przygotować wycenę.');return;}
     var body=
       'Imię i nazwisko: '+name+'\n'+
       'Telefon: '+phone+'\n'+
+      'Miejscowość: '+city+'\n'+
       'E-mail: '+email+'\n'+
       'Zakres prac: '+service+'\n\n'+
       'Opis terenu:\n'+message+'\n';

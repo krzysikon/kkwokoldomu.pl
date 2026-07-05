@@ -37,5 +37,6 @@ Następnie otwórz `http://localhost:5173`.
 
 - Telefon: **+48 532 574 313**
 - E-mail: **krzysiekikonrad@gmail.com**
+- Obszar działania: **powiat grodziski i okolice**
 
 Formularz kontaktowy działa przez `mailto:` — opcjonalnie można podłączyć backend / usługę formularzy.
