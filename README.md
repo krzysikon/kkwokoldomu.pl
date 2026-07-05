@@ -41,7 +41,7 @@ Następnie otwórz `http://localhost:5173`.
 
 Formularz kontaktowy działa przez `mailto:` — opcjonalnie można podłączyć backend / usługę formularzy.
 
-## Cennik — do uzupełnienia
+## Cennik
 
-Sekcja „Cennik" (`#cennik`) zawiera placeholdery **`000–000 zł`**. Zamień je na rzeczywiste
-widełki cenowe (szukaj komentarza `<!-- CENNIK: ... -->` w `index.html`).
+Sekcja „Cennik" (`#cennik`) zawiera widełki cenowe dla poszczególnych usług. Ceny mają
+charakter orientacyjny — do edycji bezpośrednio w `index.html`.
