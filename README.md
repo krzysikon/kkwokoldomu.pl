@@ -9,7 +9,6 @@ Domena docelowa: **kkwokoldomu.pl**
 - Mycie i czyszczenie elewacji
 - Prace ogrodowe
 - Zakładanie rabat i aranżacje ogrodowe
-- Tarasy i prace wokół domu
 - Wywóz i utylizacja odpadów
 - Sprzątanie parkingów i terenów firmowych
 - Mycie kostki brukowej i podjazdów
@@ -34,8 +33,9 @@ python -m http.server 5173
 
 Następnie otwórz `http://localhost:5173`.
 
-## Do uzupełnienia przed publikacją
+## Kontakt
 
-- Prawdziwy numer telefonu (obecnie placeholder `+48 000 000 000`)
-- Docelowy adres e-mail (obecnie `kontakt@kkwokoldomu.pl`)
-- Formularz kontaktowy działa przez `mailto:` — opcjonalnie podłączyć backend / usługę formularzy
+- Telefon: **+48 532 574 313**
+- E-mail: **krzysiekikonrad@gmail.com**
+
+Formularz kontaktowy działa przez `mailto:` — opcjonalnie można podłączyć backend / usługę formularzy.
