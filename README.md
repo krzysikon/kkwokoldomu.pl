@@ -16,12 +16,24 @@ Domena docelowa: **kkwokoldomu.pl**
 
 ## Technologia
 
-Statyczna strona jednoplikowa — czysty HTML + CSS + JavaScript, bez zależności i procesu budowania.
+Statyczna strona — czysty HTML + CSS + JavaScript, bez zależności i procesu budowania.
 
-- `index.html` — cała strona (style i skrypty osadzone w pliku)
+- `index.html` — strona główna
+- `uslugi/*.html` — 7 podstron usług (opis, cennik, sposób wyceny, galeria)
+- `assets/styles.css` — wspólny arkusz stylów (motyw granatowy)
+- `assets/main.js` — wspólny skrypt (menu, animacje, obsługa formularza)
 - `assets/` — zdjęcia i logo
 
 Fonty ładowane z Google Fonts: *Fraunces*, *Inter Tight*, *JetBrains Mono*.
+
+## Formularz kontaktowy (automatyczna wysyłka e-mail)
+
+Formularz wysyła zapytania automatycznie przez **[Formsubmit.co](https://formsubmit.co)**
+na adres `krzysiekikonrad@gmail.com` (konfiguracja w `assets/main.js`).
+
+**Jednorazowa aktywacja:** przy pierwszym wysłaniu formularza Formsubmit wyśle na skrzynkę
+e-mail z linkiem aktywacyjnym — trzeba w niego kliknąć raz, aby kolejne zgłoszenia
+docierały automatycznie. Usługa jest darmowa i nie wymaga konta.
 
 ## Podgląd lokalny
 
