@@ -39,9 +39,17 @@
     els.forEach(function (e) { io.observe(e); });
   }
 
-  // ---- Hero video: reduced-motion + subtle scroll parallax ----
+  // ---- Hero video: wybór źródła (mobile/desktop) + reduced-motion + parallax ----
   var heroVideo = document.querySelector('.hero-video');
   if (heroVideo) {
+    // Lżejszy plik na telefonach lub przy trybie oszczędzania danych.
+    var conn = navigator.connection || {};
+    var wantsLight = window.matchMedia('(max-width:768px)').matches
+      || conn.saveData === true
+      || (typeof conn.effectiveType === 'string' && /(^|\s)(2g|slow-2g|3g)/.test(conn.effectiveType));
+    var chosen = wantsLight ? heroVideo.getAttribute('data-mobile') : heroVideo.getAttribute('data-desktop');
+    if (chosen && !heroVideo.src) { heroVideo.src = chosen; heroVideo.load(); }
+
     if (reduce) {
       // Respektuj preferencję ograniczenia ruchu — pokaż klatkę (poster), nie odtwarzaj.
       heroVideo.removeAttribute('autoplay');
