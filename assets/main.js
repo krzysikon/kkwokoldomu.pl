@@ -39,6 +39,40 @@
     els.forEach(function (e) { io.observe(e); });
   }
 
+  // ---- Hero video: reduced-motion + subtle scroll parallax ----
+  var heroVideo = document.querySelector('.hero-video');
+  if (heroVideo) {
+    if (reduce) {
+      // Respektuj preferencję ograniczenia ruchu — pokaż klatkę (poster), nie odtwarzaj.
+      heroVideo.removeAttribute('autoplay');
+      heroVideo.removeAttribute('loop');
+      var pauseIt = function () { try { heroVideo.pause(); } catch (e) {} };
+      pauseIt();
+      heroVideo.addEventListener('play', pauseIt);
+    } else {
+      var heroSection = document.querySelector('.hero');
+      var lastY = -1, ticking = false;
+      var apply = function () {
+        ticking = false;
+        var h = heroSection ? heroSection.offsetHeight : window.innerHeight;
+        var y = window.scrollY;
+        if (y > h) return; // poza sekcją hero — nie licz
+        var shift = Math.min(y * 0.18, h * 0.09); // clamp w granicach powiększenia scale(1.2)
+        heroVideo.style.transform = 'translate3d(0,' + (-shift) + 'px,0) scale(1.2)';
+      };
+      window.addEventListener('scroll', function () {
+        if (window.scrollY === lastY) return;
+        lastY = window.scrollY;
+        if (!ticking) { ticking = true; requestAnimationFrame(apply); }
+      }, { passive: true });
+      apply();
+      // Niektóre przeglądarki blokują autoplay do interakcji — spróbuj wznowić.
+      var tryPlay = function () { var p = heroVideo.play(); if (p && p.catch) { p.catch(function () {}); } };
+      tryPlay();
+      document.addEventListener('visibilitychange', function () { if (!document.hidden) tryPlay(); });
+    }
+  }
+
   // ---- Contact form -> automatyczna wysyłka e-mail (Formsubmit.co) ----
   var form = document.getElementById('contactForm');
   if (form) {
