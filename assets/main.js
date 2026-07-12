@@ -25,9 +25,21 @@
     });
   }
 
-  // ---- Scroll reveal ----
+  // ---- Scroll reveal + stagger ----
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var els = document.querySelectorAll('.reveal');
+
+  // Siatki: dzieci pojawiają się kolejno (stagger), zamiast całego bloku naraz.
+  var staggerSel = '.hero-cards-grid, .svc-grid, .feature-list, .price-list, .aud-grid, .factors, .gallery, .more-svc';
+  document.querySelectorAll(staggerSel).forEach(function (c) {
+    c.classList.remove('reveal');
+    c.classList.add('stg');
+    var kids = c.children;
+    for (var i = 0; i < kids.length; i++) {
+      kids[i].style.transitionDelay = (Math.min(i, 10) * 70) + 'ms';
+    }
+  });
+
+  var els = document.querySelectorAll('.reveal, .stg');
   if (reduce || !('IntersectionObserver' in window)) {
     els.forEach(function (e) { e.classList.add('in'); });
   } else {
@@ -35,7 +47,7 @@
       entries.forEach(function (en) {
         if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
       });
-    }, { threshold: 0, rootMargin: '0px 0px -60px 0px' });
+    }, { threshold: 0, rootMargin: '0px 0px -80px 0px' });
     els.forEach(function (e) { io.observe(e); });
   }
 
