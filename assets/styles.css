@@ -272,6 +272,10 @@ section{position:relative}
 .contact-detail .k{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sage-text);}
 .contact-detail .v{font-size:1.05rem;font-weight:500;}
 .contact-detail a:hover{color:var(--sage-deep);}
+.review-btn{margin-top:28px;gap:.7em;}
+.review-btn .star{flex-shrink:0;color:var(--sage);transition:color .25s ease;}
+.review-btn:hover .star{color:inherit;}
+
 form{display:grid;gap:18px;}
 .field{display:flex;flex-direction:column;gap:7px;}
 .row2{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
