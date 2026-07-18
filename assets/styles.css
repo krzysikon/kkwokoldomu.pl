@@ -373,20 +373,27 @@ a.price-row:hover .price-info h3{color:var(--sage);}
 .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:clamp(34px,4vw,52px);}
 .gallery--two{grid-template-columns:repeat(2,1fr);}
 
-/* ---------- Przed / po ---------- */
-.ba-list{display:grid;gap:clamp(20px,2.6vw,30px);margin-top:clamp(34px,4vw,52px);}
-.ba-pair{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--line);border:1px solid var(--line);}
-.ba-item{position:relative;overflow:hidden;background:var(--card);}
-.ba-item img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;transition:transform .6s cubic-bezier(0,0,.2,1);}
-.ba-item:hover img{transform:scale(1.04);}
-.ba-tag{
-  position:absolute;top:10px;left:10px;
-  font-family:var(--f-mono);font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;
-  padding:5px 10px;
+/* ---------- Przed / po: jedna para = jeden kadr ---------- */
+.ba-list{display:grid;gap:clamp(26px,3.4vw,44px);margin-top:clamp(34px,4vw,52px);}
+.ba-figure{margin:0;}
+.ba-pair{
+  display:grid;grid-template-columns:1fr 1fr;
+  border:1px solid var(--line);overflow:hidden;background:var(--card);
 }
-.ba-tag--przed{background:rgba(8,15,28,.8);color:#fff;}
+.ba-item{position:relative;overflow:hidden;}
+.ba-item + .ba-item{border-left:2px solid var(--sage);}
+.ba-item img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;}
+.ba-tag{
+  position:absolute;top:0;left:0;
+  font-family:var(--f-mono);font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;
+  padding:8px 14px;
+}
+.ba-tag--przed{background:rgba(8,15,28,.82);color:#fff;}
 .ba-tag--po{background:var(--sage-deep);color:var(--ink);}
-.ba-caption{margin-top:10px;font-size:.9rem;color:var(--muted);}
+.ba-caption{
+  margin-top:12px;display:flex;align-items:baseline;gap:12px;
+  font-family:var(--f-mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted-light);
+}
 .gallery figure{position:relative;overflow:hidden;}
 .gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform .6s cubic-bezier(0,0,.2,1);}
 .gallery figure:hover img{transform:scale(1.05);}
