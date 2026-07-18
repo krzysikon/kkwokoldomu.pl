@@ -25,11 +25,10 @@ jobs:
       - name: Pobierz repozytorium
         uses: actions/checkout@v4
 
+      # Wymaga jednorazowego włączenia Pages w repo:
+      # Settings -> Pages -> Source: "GitHub Actions"
       - name: Skonfiguruj GitHub Pages
         uses: actions/configure-pages@v5
-        with:
-          # Spróbuj automatycznie włączyć Pages, jeśli jeszcze nie są aktywne.
-          enablement: true
 
       - name: Spakuj stronę
         uses: actions/upload-pages-artifact@v3
