@@ -54,9 +54,19 @@
   // ---- Hero video: wybór źródła (mobile/desktop) + reduced-motion + parallax ----
   var heroVideo = document.querySelector('.hero-video');
   if (heroVideo) {
+    // iOS/Android odtworzą automatycznie tylko wideo wyciszone i "inline".
+    // Same atrybuty w HTML bywają niewystarczające, gdy src ustawiamy z JS — ustawiamy też właściwości.
+    heroVideo.muted = true;
+    heroVideo.defaultMuted = true;
+    heroVideo.playsInline = true;
+    heroVideo.setAttribute('muted', '');
+    heroVideo.setAttribute('playsinline', '');
+    heroVideo.setAttribute('webkit-playsinline', 'true');
+
     // Lżejszy plik na telefonach lub przy trybie oszczędzania danych.
     var conn = navigator.connection || {};
-    var wantsLight = window.matchMedia('(max-width:768px)').matches
+    var isSmall = window.matchMedia('(max-width:768px)').matches;
+    var wantsLight = isSmall
       || conn.saveData === true
       || (typeof conn.effectiveType === 'string' && /(^|\s)(2g|slow-2g|3g)/.test(conn.effectiveType));
     var chosen = wantsLight ? heroVideo.getAttribute('data-mobile') : heroVideo.getAttribute('data-desktop');
@@ -70,26 +80,43 @@
       pauseIt();
       heroVideo.addEventListener('play', pauseIt);
     } else {
-      var heroSection = document.querySelector('.hero');
-      var lastY = -1, ticking = false;
-      var apply = function () {
-        ticking = false;
-        var h = heroSection ? heroSection.offsetHeight : window.innerHeight;
-        var y = window.scrollY;
-        if (y > h) return; // poza sekcją hero — nie licz
-        var shift = Math.min(y * 0.18, h * 0.09); // clamp w granicach powiększenia scale(1.2)
-        heroVideo.style.transform = 'translate3d(0,' + (-shift) + 'px,0) scale(1.2)';
+      // Parallax tylko na większych ekranach — na telefonach transformacje przy scrollu
+      // potrafią mocno ciąć płynność, a zysk wizualny jest znikomy.
+      if (!isSmall) {
+        var heroSection = document.querySelector('.hero');
+        var lastY = -1, ticking = false;
+        var apply = function () {
+          ticking = false;
+          var h = heroSection ? heroSection.offsetHeight : window.innerHeight;
+          var y = window.scrollY;
+          if (y > h) return; // poza sekcją hero — nie licz
+          var shift = Math.min(y * 0.18, h * 0.09); // clamp w granicach powiększenia scale(1.2)
+          heroVideo.style.transform = 'translate3d(0,' + (-shift) + 'px,0) scale(1.2)';
+        };
+        window.addEventListener('scroll', function () {
+          if (window.scrollY === lastY) return;
+          lastY = window.scrollY;
+          if (!ticking) { ticking = true; requestAnimationFrame(apply); }
+        }, { passive: true });
+        apply();
+      }
+
+      // Autoplay bywa blokowany (iOS, tryb oszczędzania energii, oszczędzanie danych).
+      // Próbujemy wielokrotnie: po załadowaniu danych, po powrocie do karty
+      // i — w ostateczności — przy pierwszym geście użytkownika.
+      var tryPlay = function () {
+        heroVideo.muted = true;
+        var p = heroVideo.play();
+        if (p && p.catch) { p.catch(function () {}); }
       };
-      window.addEventListener('scroll', function () {
-        if (window.scrollY === lastY) return;
-        lastY = window.scrollY;
-        if (!ticking) { ticking = true; requestAnimationFrame(apply); }
-      }, { passive: true });
-      apply();
-      // Niektóre przeglądarki blokują autoplay do interakcji — spróbuj wznowić.
-      var tryPlay = function () { var p = heroVideo.play(); if (p && p.catch) { p.catch(function () {}); } };
+      ['loadeddata', 'canplay', 'canplaythrough'].forEach(function (ev) {
+        heroVideo.addEventListener(ev, tryPlay);
+      });
       tryPlay();
       document.addEventListener('visibilitychange', function () { if (!document.hidden) tryPlay(); });
+      ['touchstart', 'pointerdown', 'click'].forEach(function (ev) {
+        window.addEventListener(ev, tryPlay, { passive: true, once: true });
+      });
     }
   }
 
