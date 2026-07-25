@@ -360,6 +360,13 @@ a.price-row:hover .price-info h3{color:var(--sage);}
 .price-card .k{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--sage);}
 .price-card .amount{font-family:var(--f-display);font-weight:500;font-size:clamp(2.1rem,4.4vw,3rem);color:var(--sage);margin:12px 0 2px;line-height:1;letter-spacing:-.01em;}
 .price-card .unit{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted-light);}
+.price-tiers{list-style:none;margin:14px 0 0;}
+.price-tiers li{display:flex;justify-content:space-between;gap:14px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--line);}
+.price-tiers li:first-child{border-top:1px solid var(--line);}
+.price-tiers .lbl{font-size:.98rem;color:var(--cream-on-dark);}
+.price-tiers .val{font-family:var(--f-display);font-weight:500;font-size:1.18rem;color:var(--sage);white-space:nowrap;letter-spacing:-.01em;}
+.price-tiers li.extra .lbl{color:var(--muted);}
+.price-tiers li.extra .val{color:var(--muted-light);font-size:1.02rem;}
 .price-card .pc-note{color:var(--muted);font-size:.92rem;margin:20px 0 24px;padding-top:20px;border-top:1px solid var(--line);}
 .price-card .btn{width:100%;justify-content:center;margin-bottom:10px;}
 .price-card .btn:last-child{margin-bottom:0;}
